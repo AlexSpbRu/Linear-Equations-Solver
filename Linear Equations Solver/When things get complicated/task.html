@@ -1,0 +1,80 @@
+<h2 style="text-align: center;">Description</h2>
+
+<p>This stage is devoted to various special cases of the algorithm.</p>
+
+<p>Firstly, look at the first stage of the algorithm. It says that you should change the first row in a way that the first element of the row would be equal to 1. But what if the first element of the row is 0? Any multiplication of the row never let the first element of the row be equal to 1 because it would always be 0.</p>
+
+<p style="text-align: center;"><img alt="" height="103" src="https://ucarecdn.com/4948bd52-2be3-4cb7-b06d-eee423e3755b/" width="320"></p>
+
+<p>Because of that, you need to modify the algorithm.</p>
+
+<ol>
+  <li>Before the scaling the row you should check if the corresponding element of the row is not equal to 0.</li>
+  <li>If it is, look below and to the right direction of the element in search of a non-zero element.</li>
+  <li>If there is a non-zero coefficient below the element, you need to swap this row with the row that contains zero in this place.</li>
+  <li>If below the element all coefficients are also zero you should search for a non-zero coefficient to the right of an element. If there is one, swap the whole column with this element and the column with that initial element which is equal to 0. Don't forget to remember this swap because after al,l you need to swap back them to output the solutions in the right order. There can be a lot of swaps.</li>
+  <li>If there no non-zero elements below and no non-zero elements to the right, you should find the non-zero element in the whole bottom-left part of the linear system. If there is one, swap the corresponding rows and also swap the corresponding columns. Also, don't forget to remember this swap of the columns.</li>
+  <li>If there are no such elements in the whole bottom-left part of the linear system, you should end the first part of the algorithm.</li>
+</ol>
+
+<p>After all the manipulations in the first half of the algorithm, check the possibility of no solutions. It is possible when there is a fill-zero row and a constant is not equal to zero. You can see the example below. In this case, a linear system contains a contradiction and therefore have no solutions. In this case, you can end the algorithm.</p>
+
+<p> </p>
+
+<p style="text-align: center;"><img alt="" height="62" src="https://ucarecdn.com/86e8a527-95ca-49ec-81d3-6b7ff6b07140/" width="256"></p>
+
+<p> </p>
+
+<p>Secondly, the linear system doesn't need to be an equal in amount variables and in amount of equations.</p>
+
+<p>A number of significant equations are equal to the number of non-zero rows in the linear system. A number of significant variables are equal to the number of all columns in the linear system. After that, you can determine if the linear system has an infinite amount of solutions or a single one.<br>
+  <br>
+  The following variants are possible:</p>
+
+<p>1. The number of significant equations is equal to the number of significant variables. There is only one solution, you can find it like in the previous stage. The possible examples are shown below:</p>
+
+<p style="text-align: center;"><img alt="" height="129" src="https://ucarecdn.com/eb454105-3f3f-4833-988d-91b6671843b7/" width="340"></p>
+
+<p><br>
+  2. The number of significant equations is less than the number of significant variables. There is infinitely many solutions. The possible examples are shown below:</p>
+
+<p style="text-align: center;"><img alt="" height="200" src="https://ucarecdn.com/4afce670-32f7-4cc8-b75e-6fed3d57ee5a/" width="356"></p>
+
+<p>Note that there can't be a case in which the number of significant equations is greater than the number of significant variables because in this case there would be a contradiction we handled in the previous steps of the algorithm.</p>
+
+<p>In this stage you should write a program that handles all these nuances.</p>
+
+<p>Write to file only <code>No solutions</code> or <code>Infinitely many solutions</code> when this appears to happen. If there is a single solution you should write to file only <span class="math-tex">\(x_1, x_2, ... , x_n\)</span>, and every number should be on a separate line.</p>
+
+<p>Don't forget that input can contain floating-point numbers.</p>
+
+<p>You can refactor your code and work with a linear equation on a high level of abstraction - using Command pattern.</p>
+
+<h2 style="text-align: center;">Output example</h2>
+
+<p>Suppose you have a file named in.txt. It contains the following. Note that the first line contains the number of variables and the number of equations. So, in the following example, there are three variables, <span class="math-tex">\(x_1\)</span>, <span class="math-tex">\(x_2\)</span>, <span class="math-tex">\(x_3\)</span> (remember, that last column is devoted to <span class="math-tex">\(b_i\)</span> ) and four equations (number of equations is the number of rows).</p>
+
+<pre><code>3 4
+0 1 2 9
+0 1 3 1
+1 0 6 0
+2 0 2 0
+</code></pre>
+
+<p>Below is how your program might work. The lines which start with <code>&gt;</code> represent the user input.</p>
+
+<pre><code>&gt; java Solver -in in.txt -out out.txt
+Start solving the equation.
+Rows manipulation:
+R1 &lt;-&gt; R3
+2 * R1 + R4 -&gt; R4
+-1 * R2 + R3 -&gt; R3
+-1 * R3 -&gt; R3
+No solutions
+Saved to file out.txt</code></pre>
+
+<p>And the file <code>out.txt</code> should look like this.  </p>
+
+<pre><code class="language-no-highlight">No solutions</code></pre>
+
+<p> </p>

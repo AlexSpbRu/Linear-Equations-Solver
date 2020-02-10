@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Linear_Equations_Solver-task_main" target="11" />
+      <module name="Linear_Equations_Solver-task_test" target="11" />
+      <module name="Problems-Sum_of_neighbours_main" target="11" />
+      <module name="Problems-Sum_of_neighbours_test" target="11" />
+      <module name="util_main" target="11" />
+      <module name="util_test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

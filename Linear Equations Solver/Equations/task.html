@@ -1,0 +1,68 @@
+<h2>Description</h2>
+
+<p>In this stage, the problem became much harder. You should generalize the solution for any amount of variables. The important part is to understand that in most cases if the number of equations equals the number of variables there is only one solution. We will consider special cases in the next stage.</p>
+
+<p>Such multiple linear equations connected together are called system of linear equations.</p>
+
+<p>One of the most popular ways to solve them is Gauss-Jordan Elimination. You can see <a href="https://www.youtube.com/watch?v=AhUyh-2aPEc" rel="nofollow noopener noreferrer">here</a> and <a href="https://www.youtube.com/watch?v=2j5Ic2V7wq4" rel="nofollow noopener noreferrer">here</a> detailed explanations of how to do it with 3 variables.</p>
+
+<p>The general system of linear equations looks like in the picture below. The variables are named $ x_1, x_2, ..., x_n$. The coefficients are named $ a_{i1}, a_{i2}, ... a_{in} $ for the i-th row. And the constants are named $ b_1, b_2, ... b_n $.</p>
+
+<p><img alt="" height="115" src="https://ucarecdn.com/b7d86b16-630c-4b81-bf0a-64c57db8edce/" width="364"></p>
+
+<p>Like said in the video, firstly, the algorithm should null the first column of coefficients except for the first coefficient - it should be equal to 1. Notice letters c and d instead of a and b. It means that through some calculations these coefficients became other coefficients and thus we cannot use letters a and b since it would mean the initial coefficients.</p>
+
+<p><img alt="" height="115" src="https://ucarecdn.com/4032f76a-620d-4ac8-8ff7-29ffb1770230/" width="344"></p>
+
+<p>After that, you need to null the second column all the way from the third row. The second row should contain the coefficient equal to 1.</p>
+
+<p><img alt="" height="112" src="https://ucarecdn.com/b4c3ed68-7d4b-4dc7-ac0b-289814d25daf/" width="335"></p>
+
+<p>The same goes for the rest of the columns. In the end, you should get something like that:</p>
+
+<p><img alt="" height="120" src="https://ucarecdn.com/588f8580-87f7-4db1-bd54-b84f6584d167/" width="362"></p>
+
+<p>The second part of the algorithm is to iterate rows from the last to the first and null the top part of the linear system. In the end, there should be only diagonal elements of the linear system.<br>
+    <br>
+    <img alt="" height="120" src="https://ucarecdn.com/cf0f38e4-ad7e-44fd-81c8-665a0ce9ec1a/" width="336"></p>
+
+<p>And the right part of the system is the solution to this system.</p>
+
+<p>In this stage, you need to write a program that reads coefficients from a file, solves the system of linear equations and writes the answer to another file. You should pass paths to files using command-line arguments. Write to the file only answers separated by <code>"\n"</code>. Output all the steps only to the console, not in the file.</p>
+
+<p>The first line of the file should contain the number N - a number of variables being also a number of equations. Every other N lines contain N+1 numbers - N coefficients of the current row and a constant as the last number in this line. The program also should output all rows manipulation it is doing during solving the system of linear equations.</p>
+
+<p>Try to create various classes like <code>Matrix</code>, <code>Row</code>, <code>LinearEquation</code>. With these, the code would be more readable and easier to program.</p>
+
+<h2>Output example</h2>
+
+<p>Suppose you have a file named <code>in.txt</code>. It contains the following:</p>
+
+<pre><code>3
+1 1 2 9
+2 4 -3 1
+3 6 -5 0</code></pre>
+
+<p>Below is how your program might work. The lines which start with <code>&gt;</code> represent the user input.</p>
+
+<pre><code>&gt; java Solver -in in.txt -out out.txt
+Start solving the equation.
+Rows manipulation:
+-2 * R1 + R2 -&gt; R2
+-3 * R1 + R3 -&gt; R3
+0.5 * R2 -&gt; R2
+-3 * R2 + R3 -&gt; R3
+-2 * R3 -&gt; R3
+3.5 * R3 + R2 -&gt; R2
+-2 * R3 + R1 -&gt; R1
+-1 * R2 + R1 -&gt; R1
+The solution is: (1.0, 2.0, 3.0)
+Saved to file out.txt</code></pre>
+
+<p>And the file <code>out.txt</code> should look like this (each answer should be on separate lines without any excess symbols). </p>
+
+<pre><code class="language-no-highlight">1.0
+2.0
+3.0</code></pre>
+
+<p> </p>

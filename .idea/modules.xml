@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Linear_Equations_Solver.iml" filepath="$PROJECT_DIR$/.idea/modules/Linear_Equations_Solver.iml" group="Linear_Equations_Solver" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Linear Equations Solver/task/Linear_Equations_Solver-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Linear Equations Solver/task/Linear_Equations_Solver-task.iml" group="Linear_Equations_Solver/Linear_Equations_Solver-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Linear Equations Solver/task/Linear_Equations_Solver-task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Linear Equations Solver/task/Linear_Equations_Solver-task_main.iml" group="Linear_Equations_Solver/Linear_Equations_Solver-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Linear Equations Solver/task/Linear_Equations_Solver-task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Linear Equations Solver/task/Linear_Equations_Solver-task_test.iml" group="Linear_Equations_Solver/Linear_Equations_Solver-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Sum of neighbours/Problems-Sum_of_neighbours.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Sum of neighbours/Problems-Sum_of_neighbours.iml" group="Linear_Equations_Solver/Problems-Sum_of_neighbours" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Sum of neighbours/Problems-Sum_of_neighbours_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Sum of neighbours/Problems-Sum_of_neighbours_main.iml" group="Linear_Equations_Solver/Problems-Sum_of_neighbours" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Sum of neighbours/Problems-Sum_of_neighbours_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Sum of neighbours/Problems-Sum_of_neighbours_test.iml" group="Linear_Equations_Solver/Problems-Sum_of_neighbours" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util.iml" group="Linear_Equations_Solver/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" group="Linear_Equations_Solver/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" group="Linear_Equations_Solver/util" />
+    </modules>
+  </component>
+</project>

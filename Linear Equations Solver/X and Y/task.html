@@ -1,0 +1,55 @@
+<h2>Description</h2>
+
+<p>Let's solve the problem with one additional variable and one additional equation. The variables would be x and y. The general form of this equation look like this:</p>
+
+<p><img alt="" height="65" src="https://ucarecdn.com/b81bbe09-cf30-4078-9b17-c5d6216b6cf0/" width="151"></p>
+
+<p>Where a, b, c, d, e, f are numbers. The general algorithm is to separate the variables so the first variable would be solved on the first line and the second variable would be solved on the second line.</p>
+
+<p>The main concept here is to subtract rows. You already know how to subtract numbers and subtraction of rows is not much different. Below is an example in which we subtract the first row from the second one.</p>
+
+<p><img alt="" height="54" src="https://ucarecdn.com/e2cdd775-1710-4b4e-967f-b0f76d613917/" width="307"></p>
+
+<p>As you can see, we subtract ax+by from the right side of the second equation and also subtract c from the right side of an equation. Since we subtracted the equal amounts from both sides, the equation stays correct. You also can simplify this as shown below:</p>
+
+<p><img alt="" height="52" src="https://ucarecdn.com/4cf4fad5-ade6-4df5-b1ee-21bde7a456b2/" width="267"></p>
+
+<p>But the real usefulness becomes after you realize that you can subtract only a part of an equation. Let's subtract from the second equation the first equation multiplied by d / a.</p>
+
+<p><img alt="" height="54" src="https://ucarecdn.com/be4cefbf-ab74-4820-9dfb-d2b28a0fc8ae/" width="411"></p>
+
+<p>Notice that d - a *d / a becomes d - d and becomes 0. Therefore, we can exclude x from the second equation.</p>
+
+<p><img alt="" height="53" src="https://ucarecdn.com/93c3e634-daf1-4dc5-990e-2b087d1b845a/" width="262"></p>
+
+<p>And there we can find the y value. Just divide both sides by e - b * d / a.</p>
+
+<p><img alt="" height="76" src="https://ucarecdn.com/607ed152-cbd4-4953-aef2-d100cb605877/" width="164"></p>
+
+<p>Now, you can find the x value from the first equation since you know the y value. This is a similar problem like in the previous stage.</p>
+
+<p>The first line of the input contains numbers a, b, c. The second line of the input contains numbers d, e, f. All 6 numbers are doubles. You should output the solution - x and y in a single line.</p>
+
+<p>You can use <a href="https://www.wolframalpha.com/input/?i=4x%2B5y%3D7+and+3x%2B9y%3D9" rel="nofollow noopener noreferrer">this</a> link to check if your solution is right. For the approximate form without fractions, click the "Approximate form" button.</p>
+
+<h2>Output example</h2>
+
+<p>Input 1:</p>
+
+<pre><code class="language-no-highlight">4 5 7
+3 9 9</code></pre>
+
+<p>Output 1:</p>
+
+<pre><code class="language-no-highlight">0.85714 0.71429</code></pre>
+
+<p>Input 2:</p>
+
+<pre><code class="language-no-highlight">1 2 3
+4 5 6</code></pre>
+
+<p>Output 2:</p>
+
+<pre><code class="language-no-highlight">-1.0 2.0</code></pre>
+
+<p> </p>
